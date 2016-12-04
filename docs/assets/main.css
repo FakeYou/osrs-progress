@@ -23,9 +23,14 @@ h1 {
 	-o-border-image: url(border.png) 9 repeat;
 	border-image: url(border.png) 9 fill repeat;
 	background: url(background.png);
-	max-width: 800px;
-	margin: 0 auto;
+	max-width: 838px;
+	margin: 40px auto 0 auto;
 	box-shadow: 0 0 10px 2px black;
+}
+
+.break {
+	width: 100%;
+	display: block;
 }
 
 .group {
@@ -54,14 +59,27 @@ h1 {
 	width: 155px;
 }
 
+.group.group-6 {
+	width: 186px;
+}
+
+.group.group-7 {
+	width: 217px;
+}
+
+.group.group-8 {
+	width: 248px;
+}
+
 .item {
 	display: inline-block;
 	width: 31px !important;
 	height: 35px !important;
+	cursor: pointer;
 }
 
 .item.missing {
 	opacity: 0.5;
-	-webkit-filter: grayscale(100%);
-	filter: grayscale(100%);
+	-webkit-filter: grayscale(50%);
+	filter: grayscale(50%);
 }
