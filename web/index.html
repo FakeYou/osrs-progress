@@ -1,0 +1,250 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<link href="assets/main.css" rel="stylesheet">
+		<link href="assets/items.css" rel="stylesheet">
+
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.2/lodash.min.js"></script>
+		<script src="https://unpkg.com/vue/dist/vue.js"></script>
+		<script src="assets/save-state.js"></script>
+	</head>
+	<body>
+		<h1>Fakeyou</h1>
+		<div id="app">
+			<div class="group group-3">
+				<item :progress="progress" name="Graceful hood"></item>
+				<item :progress="progress" name="Graceful top"></item>
+				<item :progress="progress" name="Graceful legs"></item>
+				<item :progress="progress" name="Graceful cape"></item>
+				<item :progress="progress" name="Graceful gloves"></item>
+				<item :progress="progress" name="Graceful boots"></item>
+			</div>
+
+			<div class="group group-3">
+				<item :progress="progress" name="Prospector Helmet"></item>
+				<item :progress="progress" name="Prospector Jacket"></item>
+				<item :progress="progress" name="Prospector Legs"></item>
+				<item :progress="progress" name="Prospector Boots"></item>
+				<item :progress="progress" name="Coal bag"></item>
+				<item :progress="progress" name="Gem bag"></item>
+			</div>
+
+			<div class="group group-3">
+				<item :progress="progress" name="Farmer's boots"></item>
+				<item :progress="progress" name="Farmer's boro trousers"></item>
+				<item :progress="progress" name="Farmer's jacket"></item>
+				<item :progress="progress" name="Farmer's strawhat"></item>
+				<item :progress="progress" name="Gricoller's can"></item>
+				<item :progress="progress" name="Seed box"></item>
+			</div>
+
+			<div class="group group-2">
+				<item :progress="progress" name="Lumberjack boots"></item>
+				<item :progress="progress" name="Lumberjack Hat"></item>
+				<item :progress="progress" name="Lumberjack legs"></item>
+				<item :progress="progress" name="Lumberjack Top"></item>
+			</div>
+
+			<div class="group group-2">
+				<item :progress="progress" name="Angler boots"></item>
+				<item :progress="progress" name="Angler hat"></item>
+				<item :progress="progress" name="Angler top"></item>
+				<item :progress="progress" name="Angler waders"></item>
+			</div>
+
+			<div class="group group-2">
+				<item :progress="progress" name="Pyromancer boots"></item>
+				<item :progress="progress" name="Pyromancer garb"></item>
+				<item :progress="progress" name="Pyromancer hood"></item>
+				<item :progress="progress" name="Pyromancer robe"></item>
+			</div>
+
+			<div class="group group-3">
+				<item :progress="progress" name="Rogue boots"></item>
+				<item :progress="progress" name="Rogue gloves"></item>
+				<item :progress="progress" name="Rogue mask"></item>
+				<item :progress="progress" name="Rogue top"></item>
+				<item :progress="progress" name="Rogue trousers"></item>
+			</div>
+
+			<div class="group group-5">
+				<item :progress="progress" name="Elite void robe"></item>
+				<item :progress="progress" name="Elite void top"></item>
+				<item :progress="progress" name="Void knight gloves"></item>
+				<item :progress="progress" name="Void knight mace"></item>
+				<item :progress="progress" name="Void knight robe"></item>
+				<item :progress="progress" name="Void knight top"></item>
+				<item :progress="progress" name="Void mage helm"></item>
+				<item :progress="progress" name="Void melee helm"></item>
+				<item :progress="progress" name="Void ranger helm"></item>
+			</div>
+
+			<div class="group group-4">
+				<item :progress="progress" name="Penance gloves"></item>
+				<item :progress="progress" name="Penance skirt"></item>
+				<item :progress="progress" name="Ranger hat"></item>
+				<item :progress="progress" name="Healer hat"></item>
+				<item :progress="progress" name="Runner hat"></item>
+				<item :progress="progress" name="Fighter hat"></item>
+				<item :progress="progress" name="Fighter torso"></item>
+				<item :progress="progress" name="Runner boots"></item>
+			</div>
+
+			<div class="group group-4">
+				<item :progress="progress" name="Infinity boots"></item>
+				<item :progress="progress" name="Infinity bottoms"></item>
+				<item :progress="progress" name="Infinity gloves"></item>
+				<item :progress="progress" name="Infinity hat"></item>
+				<item :progress="progress" name="Infinity top"></item>
+				<item :progress="progress" name="Master wand"></item>
+				<item :progress="progress" name="Mage's book"></item>
+				<item :progress="progress" name="Bones to Peaches"></item>
+			</div>
+
+			<div class="group group-4">
+				<item :progress="progress" name="Black slayer helmet"></item>
+				<item :progress="progress" name="Green slayer helmet"></item>
+				<item :progress="progress" name="Red slayer helmet"></item>
+				<item :progress="progress" name="Slayer helmet"></item>
+				<item :progress="progress" name="Dragon defender"></item>
+				<item :progress="progress" name="Broad bolts"></item>
+				<item :progress="progress" name="Slayer ring"></item>
+				<item :progress="progress" name="Herb sack"></item>
+			</div>
+
+			<div class="group group-2">
+				<item :progress="progress" name="Dharok's greataxe"></item>
+				<item :progress="progress" name="Dharok's helm"></item>
+				<item :progress="progress" name="Dharok's platebody"></item>
+				<item :progress="progress" name="Dharok's platelegs"></item>
+			</div>
+
+			<div class="group group-2">
+				<item :progress="progress" name="Ahrim's hood"></item>
+				<item :progress="progress" name="Ahrim's robeskirt"></item>
+				<item :progress="progress" name="Ahrim's robetop"></item>
+				<item :progress="progress" name="Ahrim's staff"></item>
+			</div>
+
+			<div class="group group-2">
+				<item :progress="progress" name="Guthan's chainskirt"></item>
+				<item :progress="progress" name="Guthan's helm"></item>
+				<item :progress="progress" name="Guthan's platebody"></item>
+				<item :progress="progress" name="Guthan's warspear"></item>
+			</div>
+
+			<div class="group group-2">
+				<item :progress="progress" name="Torag's hammers"></item>
+				<item :progress="progress" name="Torag's helm"></item>
+				<item :progress="progress" name="Torag's platebody"></item>
+				<item :progress="progress" name="Torag's platelegs"></item>
+			</div>
+
+			<div class="group group-2">
+				<item :progress="progress" name="Verac's brassard"></item>
+				<item :progress="progress" name="Verac's flail"></item>
+				<item :progress="progress" name="Verac's helm"></item>
+				<item :progress="progress" name="Verac's plateskirt"></item>
+			</div>
+
+			<div class="group group-2">
+				<item :progress="progress" name="Karil's coif"></item>
+				<item :progress="progress" name="Karil's crossbow"></item>
+				<item :progress="progress" name="Karil's leathertop"></item>
+				<item :progress="progress" name="Karil's leatherskirt"></item>
+			</div>
+
+			<div class="group">
+				<item :progress="progress" name="Dragon 2h sword"></item>
+				<item :progress="progress" name="Dragon axe"></item>
+				<item :progress="progress" name="Dragon boots"></item>
+				<item :progress="progress" name="Dragon chainbody"></item>
+				<item :progress="progress" name="Dragon defender"></item>
+				<item :progress="progress" name="Dragon full helm"></item>
+				<item :progress="progress" name="Dragon pickaxe"></item>
+				<item :progress="progress" name="Dragon platelegs"></item>
+				<item :progress="progress" name="Dragon plateskirt"></item>
+				<item :progress="progress" name="Dragon spear"></item>
+				<item :progress="progress" name="Dragon sq shield"></item>
+				<item :progress="progress" name="Dragon warhammer"></item>
+			</div>
+		</div>
+
+		<script>
+			const STATE_MISSING = 'MISSING';
+			const STATE_OWNED = 'OWNED';
+
+			let app;
+
+			Vue.component('item', {
+				props: ['name', 'stages', 'progress'],
+				template: '<div v-on:click="update" v-bind:class="[{ item: true }, spriteSelector, { missing: isMissing }]">',
+				computed: {
+					isMissing: function() {
+						return this.state === STATE_MISSING;
+					},
+					key: function () {
+						return this.name
+							.toLowerCase()
+							.replace(/ /g, '-')
+							.replace(/[\',\(\)&]/g, '')
+							.replace(/--/g, '-');
+					},
+					state: function() {
+						return this.progress[this.key] ? this.progress[this.key].state : STATE_MISSING;
+					},
+					stage: function() {
+						return this.progress[this.key] ? this.progress[this.key].stage : 1;
+					},
+					spriteSelector: function() {
+						return this.stages ? `item-${this.key}_${this.stage}` : `item-${this.key}`;
+					},
+				},
+				methods: {
+					update: function(event) {
+						if (!app.progress[this.key]) {
+							Vue.set(app.progress, this.key, { state: STATE_MISSING, stage: 1 });
+						}
+
+						if (this.state === STATE_MISSING) {
+							app.progress[this.key].state = STATE_OWNED;
+
+							if (this.stages) {
+								app.progress[this.key].stage = 1;
+							}
+						}
+						else {
+							if (this.stages && app.progress[this.key].stage < this.stages) {
+								app.progress[this.key].stage += 1;
+							}
+							else {
+								app.progress[this.key].state = STATE_MISSING;
+								app.progress[this.key].stage = 1;
+							}
+						}
+					}
+				}
+			});
+
+			app = new Vue({
+				el: '#app',
+				mixins: [saveStateStorage],
+				methods: {
+					getSaveStateConfig: function() {
+						return {
+							cacheKey: 'app',
+							saveProperties: ['progress']
+						};
+					},
+				},
+				data: {
+					progress: {
+
+					}
+				}
+			});
+		</script>
+	</body>
+</html>
